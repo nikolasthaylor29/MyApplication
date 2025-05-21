@@ -82,8 +82,8 @@ class MainActivity : ComponentActivity(), SensorEventListener {
     private fun sendHeartRateToRealtimeDB(bpm: Float) {
         val currentTime = System.currentTimeMillis()
 
-        // Verifica se passou pelo menos 30 segundos (30.000 milissegundos)
-        if (currentTime - lastSentTime < 30_000) return
+        // Verifica se passou pelo menos 10 segundos (30.000 milissegundos)
+        if (currentTime - lastSentTime < 10_000) return
 
         lastSentTime = currentTime
 
